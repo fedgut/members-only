@@ -2,9 +2,11 @@
 
 Rails.application.routes.draw do
 
-  get '/', to: 'static_pages#index'
+  get '/', to: 'static_pages#index', as: 'home'
 
   get 'signin', to: 'sessions#new'
   post 'signin', to: 'sessions#create'
-  delete 'singout', to: 'sessions#delete'
+  delete 'signout', to: 'sessions#delete'
+  resource :user
+
 end

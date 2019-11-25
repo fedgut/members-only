@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     session[:user_id] = user.id
     user.remember
     user.save
-    cookies.permament[:remember_token] = user.remember_token
+    cookies.permanent[:remember_token] = user.remember_token
 
     redirect_to(session[:forwarding_url] || user)
   end
@@ -16,6 +16,7 @@ class ApplicationController < ActionController::Base
   def sing_out
     cookies.delete(:remember_token)
     current_user=(nil)
+    redirect_to home_path
   end
 
 

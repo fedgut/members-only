@@ -5,14 +5,11 @@ class SessionsController < ApplicationController
   end
 
   def create
-    puts params[:email]
     user = User.find_by(email: params[:email].to_s.downcase)
-    if(user && user.authenticate(params[:password]))
-      puts "logged in "
+    if user&.authenticate(params[:password])
       log_in(user)
       current_user=(user)
     else
-      puts "not logged in "
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
     end

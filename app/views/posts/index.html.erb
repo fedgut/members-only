@@ -1,0 +1,11 @@
+<h1>post index</h1> <br>
+
+<% @posts.each do |e|%>
+<%= e.title %> 
+<%= e.id %>
+  <% if logged_in? %>
+  <%= e.user.username %>
+  <% end %>
+<br>
+<% end %>
+

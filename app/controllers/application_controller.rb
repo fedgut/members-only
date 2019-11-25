@@ -16,6 +16,6 @@ class ApplicationController < ActionController::Base
   def sing_out
     cookies.delete(:remember_token)
     @current_user = nil
-    redirect_to home_pathgit add 
+    redirect_to home_path
   end
 end

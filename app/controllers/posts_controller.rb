@@ -25,10 +25,9 @@ class PostsController < ApplicationController
   private
 
   def user_logged_in
-    unless logged_in?
-      flash[:danger] = 'Please log in'
-      redirect_to signin_path
-    end
+    return if logged_in?
+
+    redirect_to signin_path
   end
 
   def post_params

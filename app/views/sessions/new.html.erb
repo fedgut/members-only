@@ -1,6 +1,11 @@
-<%= form_with do %>
-<%= label_tag(:email, 'Email') %>
-<%= email_field(:email , 'email') %> <br>
-<%= label_tag(:password, 'Password')%>
-<%= password_field(:password, 'Password')%>
+<%= form_with  local: true do |f| %>
+
+  <%= f.label  'Email' %>
+  <%= f.email_field :email %> <br>
+
+  <%= f.label 'Password' %>
+  <%= f.password_field :password %><br>
+
+  <%= f.submit "sign in" %>
+
 <% end %>

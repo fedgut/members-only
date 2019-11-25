@@ -1,5 +1,5 @@
-class StaticPagesController < ApplicationController
-  def index
+# frozen_string_literal: true
 
-  end
+class StaticPagesController < ApplicationController
+  def index; end
 end

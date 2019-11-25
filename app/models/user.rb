@@ -14,13 +14,12 @@ class User < ApplicationRecord
 
     # Returns a random token.
     def new_token
-     SecureRandom.urlsafe_base64
+      SecureRandom.urlsafe_base64
     end
   end
 
   def remember
-      self.remember_token = User.new_token
-      self.remember_token = User.digest(remember_token)
+    self.remember_token = User.new_token
+    self.remember_token = User.digest(remember_token)
   end
-
 end

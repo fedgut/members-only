@@ -1,5 +1,6 @@
-class PostsController < ApplicationController
+# frozen_string_literal: true
 
+class PostsController < ApplicationController
   before_action :user_logged_in, only: %i[new create]
 
   def new

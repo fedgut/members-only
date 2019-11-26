@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   get '/', to: 'static_pages#index', as: 'home'
 
-  get 'signup', to: 'sessions#new'
-  post 'signup', to: 'sessions#create'
+  get 'signup', to: 'users#new'
+  post 'signup', to: 'users#create'
 
   get 'signin', to: 'sessions#new'
   post 'signin', to: 'sessions#create'

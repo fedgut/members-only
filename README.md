@@ -1,24 +1,33 @@
-# README
+# Collaborative Project: Building with Active Record
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Project Specifications:
 
-Things you may want to cover:
+In these projects, you’ll be working to implement authentication systems so users can only access areas of a site they are authorized to.. Full task description: [here](https://www.theodinproject.com/courses/ruby-on-rails/lessons/authentication)
 
-* Ruby version
+## Built With:
 
-* System dependencies
+Ruby, Ruby on rails, sqlite3 local, postgresql development.
 
-* Configuration
+## Author
+Eduardo Gutierrez https://github.com/fedgut <br>
+Luis Preza https://github.com/men32z
 
-* Database creation
 
-* Database initialization
+## Getting started
 
-* How to run the test suite
+To get started with the app, clone the repo and then install the needed gems:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$ bundle install --without production
+```
 
-* Deployment instructions
+Next, migrate the database:
 
-* ...
+```
+$ rails db:migrate
+```
+
+To be able to see what has been done, run the rails server
+```
+$ rails server
+```
